@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0f6">
+  <title>Pixel Doll Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">♡ PIXEL DOLL STUDIO</a>
+    <div class="top-stats">
+      <span>⭐ <b id="level">1</b></span>
+      <span>💗 <b id="coins">0</b></span>
+    </div>
+  </header>
+
+  <section class="welcome">
+    <p class="eyebrow">YOUR LITTLE FASHION WORLD</p>
+    <h1>Dress up your dream doll ✨</h1>
+    <p>Phối đồ, tạo phong cách và lưu nàng búp bê của bạn.</p>
+  </section>
+
+  <main class="layout">
+    <section class="preview-panel">
+      <div class="preview-header">
+        <div>
+          <p class="eyebrow">YOUR CHARACTER</p>
+          <h2 id="dollName">Momo</h2>
+        </div>
+        <button id="randomBtn" class="round-btn" title="Phối đồ ngẫu nhiên">🎲</button>
+      </div>
+
+      <div class="scene scene-pink" id="scene">
+        <div class="decor decor-one">✦</div>
+        <div class="decor decor-two">♡</div>
+        <div class="decor decor-three">✿</div>
+        <div class="sparkle sparkle-one">✧</div>
+        <div class="sparkle sparkle-two">✦</div>
+        <div class="doll-wrap">
+          <canvas id="dollCanvas" width="240" height="360"
+            aria-label="Nhân vật búp bê pixel"></canvas>
+        </div>
+        <div class="scene-caption">♡ made with love ♡</div>
+      </div>
+
+      <div class="name-row">
+        <label for="nameInput">Tên nhân vật</label>
+        <input id="nameInput" maxlength="18" value="Momo" placeholder="Đặt tên...">
+      </div>
+
+      <div class="main-actions">
+        <button id="saveBtn" class="primary-btn">♡ Lưu thiết kế</button>
+        <button id="downloadBtn" class="secondary-btn">⬇ PNG</button>
+      </div>
+      <button id="resetBtn" class="text-btn">↺ Đặt lại nhân vật</button>
+    </section>
+
+    <section class="wardrobe-panel">
+      <div class="wardrobe-title">
+        <div>
+          <p class="eyebrow">MIX & MATCH</p>
+          <h2>Tủ thời trang</h2>
+        </div>
+        <span class="wardrobe-count">BỘ SƯU TẬP ♡</span>
+      </div>
+
+      <nav class="tabs" id="tabs" aria-label="Danh mục trang phục">
+        <button class="tab active" data-category="outfit">👗 Đồ</button>
+        <button class="tab" data-category="hair">💇 Tóc</button>
+        <button class="tab" data-category="accessory">🎀 Phụ kiện</button>
+        <button class="tab" data-category="makeup">💄 Makeup</button>
+        <button class="tab" data-category="background">🌷 Nền</button>
+      </nav>
+
+      <div class="wardrobe-subtitle">
+        <h3 id="categoryTitle">Trang phục</h3>
+        <span id="itemCount"></span>
+      </div>
+
+      <div class="item-grid" id="itemGrid"></div>
+
+      <div class="color-section">
+        <div class="wardrobe-subtitle">
+          <h3>Màu sắc</h3>
+          <span>Chọn màu yêu thích</span>
+        </div>
+        <div class="color-swatches" id="colorSwatches"></div>
+      </div>
+
+      <div class="bottom-tip">
+        <span>💡</span>
+        <p>Thử kết hợp nhiều món đồ để tạo phong cách độc đáo của riêng bạn!</p>
+      </div>
+    </section>
+  </main>
+
+  <section class="gallery-section">
+    <div class="gallery-heading">
+      <div>
+        <p class="eyebrow">YOUR CREATIONS</p>
+        <h2>Album búp bê ♡</h2>
+        <p>Những thiết kế bạn đã lưu trên thiết bị này.</p>
+      </div>
+      <span class="album-count" id="albumCount">0 thiết kế</span>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+    <div class="empty-gallery" id="emptyGallery">
+      <div class="empty-icon">♡</div>
+      <h3>Album còn trống</h3>
+      <p>Hãy phối bộ đồ đầu tiên và nhấn “Lưu thiết kế” nhé!</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>♡ PIXEL DOLL STUDIO</span>
+    <p>A tiny world of fashion and imagination.</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
